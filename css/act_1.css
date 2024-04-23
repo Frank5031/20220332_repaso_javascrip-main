@@ -1,0 +1,12 @@
+.bodyfondo{
+    background-color: #FAF0CA;
+}
+
+.contenedor{
+    background-color: white;
+}
+
+.fondo{
+    background-image: url(../img/fondo.png);
+    background-color: #FAF0CA;
+}

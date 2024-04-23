@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Cards</title>
+    <!-- Agrega los estilos de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/act_1.css">
+</head>
+
+<body class="bodyfondo">
+    <div class="container-fluid pt-5">
+        <br>
+        <!-- Título de la sección de historial de compras -->
+        <div class="p-3">
+            <h3><b>Listando des un Objeto</b></h3>
+            <h6>Act 1 practica de javascript</h6>
+        </div>
+
+            <div id="userCardsContainer">
+    
+                <!-- Los cards se agregarán aquí dinámicamente -->
+            </div>
+
+
+</div>
+
+    <script>
+        const users = [
+            {
+                name: 'Walter White',
+                avatar: '../img/walter.webp',
+            },
+            {
+                name: 'Tony Soprano',
+                avatar: '../img/tony.jpeg',
+            },
+            {
+                name: 'Tyrion Lannister',
+                avatar: '../img/tyron.jpg',
+            },
+            {
+                name: 'Sherlock Holmes',
+                avatar: '../img/sherlock.webp',
+            },
+            {
+                name: 'Eleven',
+                avatar: '../img/eleven.jpeg',
+            },
+            {
+                name: 'Michael Scott',
+                avatar: '../img/MichaelScott.png',
+            },
+            {
+                name: 'Daenerys Targaryen',
+                avatar: '../img/emilia.webp',
+            },
+            {
+                name: 'Bugs bunny',
+                avatar: '../img/Bugs.jpg',
+            },
+            {
+                name: 'Michael jordan',
+                avatar: '../img/Michael.jpg',
+            },
+            {
+                name: 'Olivia Pope',
+                avatar: '../img/Olivia.jpg',
+            },
+        ];
+
+        // Obtener el contenedor donde se mostrarán los cards
+        const userCardsContainer = document.getElementById('userCardsContainer');
+
+        // Mapear cada usuario a un elemento HTML de card de Bootstrap
+        const userCards = users.map(user => `
+        <!-- Contenedor principal del historial de compras -->
+     <div class="container shadow p-4 mt-4 rounded-4 contenedor_historial contenedor">
+        <!-- Entradas de historial de compras -->
+        <!-- Entrada de historial de compra 1 -->
+        <h5>
+            <b>${user.name}</b>
+        </h5>
+        <div class="row py-3">
+            <div class="col-4 py-2">
+                <img class="image-fluid" src="${user.avatar}" alt="" width="200">
+            </div>
+            <div class="col-12 col-lg-10">
+                <div class="row">
+                    <div class="col-9 col-lg-11 py-3">
+                        <div class="row">
+                            <div class="col-8 col-lg-4">
+                                <p class="fs-6">Edad: 50 años(todos tienen 50)</p>
+                            </div>
+                            <div class="col-8 col-lg-4 ">
+                                <p class="fs-6">Nacionalidad: Salvadoreña</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+`);
+
+        // Agregar los cards al contenedor
+        userCardsContainer.innerHTML = userCards.join('');
+
+    </script>
+
+</body>
+
+</html>
